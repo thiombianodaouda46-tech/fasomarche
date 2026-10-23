@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#087443">
+<title>FasoMarché — Le marché du Burkina, en ligne</title>
+<style>
+:root{--green:#087443;--yellow:#f5c400;--red:#d62828;--ink:#17211b;--muted:#65716a;--bg:#f5f7f4;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--green);color:white;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:1.45rem;letter-spacing:-.5px}.brand span{color:var(--yellow)}
+nav a{color:white;text-decoration:none;margin-left:18px;font-weight:700;font-size:.95rem}
+.hero{padding:52px 5% 46px;background:linear-gradient(115deg,#075c36,#0b874e);color:white}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.eyebrow{color:var(--yellow);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;margin:12px 0 16px}
+.hero p{font-size:1.08rem;line-height:1.6;max-width:600px;color:#e7f5ec}
+.hero-card{background:#fff;color:var(--ink);border-radius:18px;padding:24px;box-shadow:0 15px 40px #003d242e}
+.flag{display:flex;height:9px;border-radius:20px;overflow:hidden;margin-bottom:18px}.flag i{flex:1}.flag i:nth-child(1){background:var(--green)}.flag i:nth-child(2){background:var(--yellow)}.flag i:nth-child(3){background:var(--red)}
+.hero-card strong{font-size:1.2rem}.hero-card p{color:var(--muted);font-size:.95rem}
+.searchbar{display:flex;gap:8px;margin-top:22px;max-width:640px}.searchbar input{min-width:0;flex:1;padding:14px 16px;border:0;border-radius:10px;font-size:1rem}.btn{display:inline-block;border:0;border-radius:10px;padding:13px 17px;background:var(--yellow);color:#222;font-weight:800;text-decoration:none;cursor:pointer}
+main{max-width:1100px;margin:0 auto;padding:32px 5% 60px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:8px 0 20px}
+h2{margin:0;font-size:1.7rem}.sub{color:var(--muted);margin:7px 0 0}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:34px}
+.category{background:white;border-radius:14px;padding:18px 12px;text-align:center;border:1px solid #e5eae5;font-weight:800}
+.category .emoji{display:block;font-size:1.8rem;margin-bottom:9px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product{background:white;border:1px solid #e5eae5;border-radius:15px;overflow:hidden}
+.product-art{height:145px;display:grid;place-items:center;font-size:3.7rem;background:linear-gradient(135deg,#e3f2e8,#fff4c9)}
+.product-body{padding:16px}.product h3{margin:0 0 8px;font-size:1.05rem}.price{color:var(--green);font-weight:900;font-size:1.1rem}.seller{font-size:.85rem;color:var(--muted);margin:8px 0 14px}
+.product .btn{width:100%;text-align:center;background:var(--green);color:white}
+.notice{background:#fff8d8;border-left:4px solid var(--yellow);padding:14px 16px;border-radius:8px;margin:24px 0;color:#51461c;line-height:1.5}
+.seller-cta{background:#e6f3eb;border-radius:18px;padding:26px;margin-top:35px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.seller-cta p{margin-bottom:0;color:#40564a;line-height:1.5}
+footer{background:#14251b;color:#dce9df;padding:25px 5%;text-align:center;line-height:1.7}
+footer small{color:#a9beb0}
+@media(max-width:700px){.hero-inner{grid-template-columns:1fr}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}nav a{margin-left:0;margin-right:12px}.hero{padding-top:36px}}
+@media(max-width:460px){.products{grid-template-columns:1fr}.searchbar{flex-direction:column}.searchbar .btn{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Faso<span>Marché</span> 🇧🇫</div>
+  <nav><a href="#produits">Produits</a><a href="#vendeurs">Vendre sur le site</a></nav>
+</header>
+<section class="hero">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow">Le marché du Burkina, en ligne</div>
+   <h1>Achetez local.<br>Vendez facilement.</h1>
+   <p>Découvrez les produits et les commerçants du Burkina Faso au même endroit. Une vitrine simple pour acheter et faire connaître votre activité.</p>
+   <form class="searchbar" id="searchForm"><input id="searchInput" type="search" placeholder="Rechercher un produit..." aria-label="Rechercher un produit"><button class="btn" type="submit">Rechercher</button></form>
+  </div>
+  <div class="hero-card"><div class="flag"><i></i><i></i><i></i></div><strong>Bienvenue sur FasoMarché</strong><p>Une première version de démonstration. Les articles affichés sont des exemples : remplacez-les par les vrais produits des commerçants.</p><a class="btn" href="#produits">Voir les produits</a></div>
+ </div>
+</section>
+<main>
+ <section>
+  <div class="section-head"><div><h2>Parcourir les catégories</h2><p class="sub">Les secteurs qui font vivre nos marchés.</p></div></div>
+  <div class="categories">
+   <div class="category"><span class="emoji">👕</span>Vêtements</div>
+   <div class="category"><span class="emoji">📱</span>Téléphones</div>
+   <div class="category"><span class="emoji">🥜</span>Produits locaux</div>
+   <div class="category"><span class="emoji">🪑</span>Maison</div>
+  </div>
+ </section>
+ <section id="produits">
+  <div class="section-head"><div><h2>Produits à découvrir</h2><p class="sub" id="resultCount">Quelques exemples pour présenter la boutique.</p></div></div>
+  <div class="products" id="productGrid">
+   <article class="product" data-search="tissu pagne vêtements mode">
+    <div class="product-art">🧵</div><div class="product-body"><h3>Pagne traditionnel</h3><div class="price">8 500 FCFA</div><div class="seller">Vendeur exemple · Ouagadougou</div><a class="btn order" href="#">Contacter le vendeur</a></div>
+   </article>
+   <article class="product" data-search="beurre karité cosmétique produit local">
+    <div class="product-art">🧴</div><div class="product-body"><h3>Beurre de karité</h3><div class="price">2 000 FCFA</div><div class="seller">Vendeuse exemple · Bobo-Dioulasso</div><a class="btn order" href="#">Contacter le vendeur</a></div>
+   </article>
+   <article class="product" data-search="sac artisanal artisanat mode">
+    <div class="product-art">👜</div><div class="product-body"><h3>Sac artisanal</h3><div class="price">6 000 FCFA</div><div class="seller">Artisan exemple · Koudougou</div><a class="btn order" href="#">Contacter le vendeur</a></div>
+   </article>
+   <article class="product" data-search="écouteurs téléphone électronique">
+    <div class="product-art">🎧</div><div class="product-body"><h3>Écouteurs</h3><div class="price">3 500 FCFA</div><div class="seller">Boutique exemple · Ouagadougou</div><a class="btn order" href="#">Contacter le vendeur</a></div>
+   </article>
+   <article class="product" data-search="miel aliment produit local">
+    <div class="product-art">🍯</div><div class="product-body"><h3>Miel local</h3><div class="price">3 000 FCFA</div><div class="seller">Producteur exemple · Banfora</div><a class="btn order" href="#">Contacter le vendeur</a></div>
+   </article>
+   <article class="product" data-search="chaussures sandales mode vêtements">
+    <div class="product-art">👡</div><div class="product-body"><h3>Sandales</h3><div class="price">5 000 FCFA</div><div class="seller">Vendeur exemple · Ouahigouya</div><a class="btn order" href="#">Contacter le vendeur</a></div>
+   </article>
+  </div>
+  <div class="notice"><strong>Important :</strong> les prix, produits et vendeurs sont fictifs pour la maquette. Aucun paiement en ligne n'est activé dans cette version.</div>
+ </section>
+ <section class="seller-cta" id="vendeurs">
+  <div><h2>Vous êtes commerçant ?</h2><p>Faites découvrir vos produits à de nouveaux clients.<br>La prochaine étape sera d'ajouter votre numéro WhatsApp et un formulaire d'inscription vendeur.</p></div>
+  <a class="btn" href="mailto:contact@fasomarche.example?subject=Inscription%20vendeur%20FasoMarch%C3%A9">Devenir vendeur</a>
+ </section>
+</main>
+<footer><strong>FasoMarché 🇧🇫</strong><br>Une vitrine pour les commerces du Burkina Faso.<br><small>Maquette de démarrage · Nom provisoire · Contact à configurer</small></footer>
+<script>
+const form=document.getElementById('searchForm');
+const input=document.getElementById('searchInput');
+const cards=[...document.querySelectorAll('.product')];
+const count=document.getElementById('resultCount');
+form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim().toLocaleLowerCase('fr');let n=0;cards.forEach(card=>{const match=!q||card.innerText.toLocaleLowerCase('fr').includes(q)||card.dataset.search.includes(q);card.style.display=match?'':'none';if(match)n++;});count.textContent=n+' produit(s) trouvé(s).';});
+document.querySelectorAll('.order').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();alert('Pour activer les commandes, il faut ajouter le numéro WhatsApp du vendeur. Les produits présentés sont des exemples.');}));
+</script>
+</body>
+</html>
